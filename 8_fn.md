@@ -52,6 +52,14 @@
   SELECT LENGTH(direccion) FROM clientes;
   ```
 
+- `POSITION(subcadena IN cadena)` devuelve la **posición (1-indexada)** de la primera ocurrencia de `subcadena` en `cadena`. Si no la encuentra, devuelve **0**.
+
+  ```sql
+  SELECT POSITION('o' IN 'Hola mundo'); -- 2
+  SELECT POSITION('mundo' IN 'Hola mundo'); -- 6
+  SELECT POSITION('x' IN 'Hola mundo'); -- 0
+  ```
+
 ## 3. Funciones de Fecha y Hora
 
 - `CURRENT_DATE` / `CURRENT_TIMESTAMP` → Fecha y hora actual.
@@ -59,6 +67,8 @@
   ```sql
   SELECT CURRENT_DATE;
   ```
+
+````
 
 - `EXTRACT(field FROM fecha)` → Extrae año, mes, día, etc.
 
@@ -127,3 +137,4 @@
 - PostgreSQL tiene muchas más funciones (JSON, GIS, etc.).
 - Usa `\df` en `psql` para listar funciones disponibles.
 - Documentación oficial: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/).
+````
